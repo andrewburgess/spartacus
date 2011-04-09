@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android" 
+	android:layout_width="match_parent" 
+	android:layout_height="match_parent" 
+	android:orientation="vertical">
+	
+	<ScrollView 
+		android:layout_width="fill_parent" 
+		android:layout_height="fill_parent" 
+		android:fadeScrollbars="true" 
+		android:scrollbars="vertical">
+		
+		<LinearLayout 
+			android:layout_width="match_parent"
+			android:orientation="vertical" 
+			android:layout_height="match_parent">
+			
+			<TextView 
+				android:gravity="center_horizontal" 
+				android:text="@string/single_arm_dumbbell_swing" 
+				android:textStyle="bold" 
+				android:layout_marginTop="10dp" 
+				android:layout_gravity="center_horizontal" 
+				android:textSize="24dp" android:id="@+id/title" 
+				android:layout_width="fill_parent" 
+				android:layout_height="wrap_content" />
+				
+			<LinearLayout 
+				android:orientation="vertical"
+				android:layout_width="match_parent" 
+				android:layout_height="wrap_content">
+				
+				<TextView 
+					android:text="60 seconds" 
+					android:id="@+id/seconds_remaining" 
+					android:layout_height="wrap_content"
+					android:textSize="40dp"
+					android:textStyle="bold" 
+					android:layout_width="fill_parent" 
+					android:layout_marginTop="5dp" 
+					android:layout_gravity="center_horizontal" 
+					android:gravity="center_horizontal"/>
+				
+				<LinearLayout
+					android:id="@+id/start_panel"
+					android:orientation="horizontal"
+					android:layout_width="match_parent" 
+					android:layout_height="wrap_content"
+					android:layout_marginTop="5dp"
+					android:layout_marginBottom="10dp"
+					android:layout_marginLeft="5dp"
+					android:layout_marginRight="5dp">
+					
+					<Button 
+						android:text="Begin Exercise" 
+						android:id="@+id/begin" 
+						android:layout_width="wrap_content" 
+						android:layout_height="wrap_content" />
+						
+					<TextView 
+						android:text="@string/speak_instructions" 
+						android:id="@+id/speak_text" 
+						android:layout_width="wrap_content" 
+						android:layout_height="wrap_content" 
+						android:layout_gravity="right|center_vertical" 
+						android:gravity="right|center_vertical"/>
+					
+				</LinearLayout>
+			</LinearLayout>
+				
+			<TextView 
+				android:text="@string/instructions" 
+				android:textStyle="bold" 
+				android:layout_marginLeft="10dp" 
+				android:layout_marginTop="10dp" 
+				android:id="@+id/instructions_header" 
+				android:layout_width="fill_parent" 
+				android:layout_height="wrap_content" />
+				
+			<TextView 
+				android:text="@string/single_arm_dumbbell_swing_instructions" 
+				android:layout_marginRight="15dp" 
+				android:layout_marginLeft="15dp" 
+				android:layout_marginTop="5dp" 
+				android:id="@+id/instructions" 
+				android:layout_width="fill_parent" 
+				android:layout_height="wrap_content" />
+				
+			<ImageView 
+				android:src="@drawable/dumbbell_swing_a" 
+				android:layout_gravity="center_horizontal" 
+				android:id="@+id/step_a" 
+				android:layout_marginTop="10dp" 
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content" />
+				
+			<TextView 
+				android:gravity="center_horizontal" 
+				android:text="@string/step_a" 
+				android:textStyle="bold" 
+				android:layout_marginTop="2dp" 
+				android:layout_gravity="center_horizontal" 
+				android:id="@+id/step_a" 
+				android:layout_width="fill_parent" 
+				android:layout_height="wrap_content" />
+				
+			<ImageView 
+				android:src="@drawable/dumbbell_swing_b" 
+				android:layout_gravity="center_horizontal" 
+				android:id="@+id/step_b" 
+				android:layout_marginTop="10dp" 
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content" />
+				
+			<TextView 
+				android:gravity="center_horizontal" 
+				android:text="@string/step_b" 
+				android:textStyle="bold" 
+				android:layout_marginTop="2dp" 
+				android:layout_gravity="center_horizontal" 
+				android:id="@+id/step_b" 
+				android:layout_width="fill_parent" 
+				android:layout_height="wrap_content" />
+		</LinearLayout>
+	</ScrollView>
+	
+</LinearLayout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, StartupActivity!</string>
+    <string name="app_name">Spartacus Workout</string>
+    <string name="main_title">Spartacus Workout</string>
+    <string name="begin_workout">Begin Workout</string>
+    <string name="goblet_squat">Goblet Squat</string>
+    <string name="goblet_squat_instructions">Grab a dumbbell and hold it vertically in front of your chest, with your feet slightly wider than shoulder-width apart [A]. Keeping your back naturally arched, push your hips back, bend your knees, and lower your body until the tops of your thighs are at least parallel to the floor. Pause, then push yourself back up to the start. If that’s too hard, do a bodyweight squat instead.</string>
+    <string name="mountain_climber">Mountain Climber</string>
+    <string name="mountain_climber_instructions">Assume a pushup position with your arms completely straight. Your body should form a straight line from your head to your ankles [A]. Without allowing your lower-back posture to change, lift your foot off the floor and slowly raise your knee toward your chest [B]. Return to the starting position, and repeat with your left leg, alternating back and forth each repetition.</string>
+    <string name="single_arm_dumbbell_swing">Single-Arm Dumbell Swing</string>
+    <string name="single_arm_dumbbell_swing_instructions">Grab a dumbbell with an overhand grip and hold it in front of your waist at arm’s length. Keeping your lower back slightly arched, bend at your hips and knees and swing the dumbbell between your legs [A]. Keeping your arm straight, thrust your hips forward, straighten your knees, and swing the dumbbell up to shoulder level as you rise to standing position. Now swing the weight back and forth. At the 30-second mark, switch arms.</string>
+    <string name="t_pushup">T-Pushup</string>
+    <string name="t_pushup_instructions">Grasp a pair of hex dumbbell handles and set yourself in pushup position, your arms straight [A]. Then bend your elbows and lower your body until your chest nearly touches the floor [B]. As you push yourself back up, lift your right hand and rotate the right side of your body up as you raise the dumbbell straight over your shoulder until your body forms a T [C]. Reverse the move, then repeat on your right side.</string>
+    <string name="split_jump">Split Jump</string>
+    <string name="split_jump_instructions">Stand in a staggered stance with your feet about 2 to 3 feet apart, your left in front of your right. Keeping your torso upright, bend your legs and lower your body into a lunge [A]. Now quickly switch directions and jump with enough force to propel both feet off the floor [B]. While in the air, scissor-kick your legs so you land with the opposite leg forward [C]. Repeat, alternating back and forth each repetition.</string>
+    <string name="dumbbell_row">Dumbbell Row</string>
+    <string name="dumbbell_row_instructions">Grab a pair of dumbbells, bend at your hips (don’t round your lower back) and lower your torso until it’s almost parallel to the floor. Let the dumbbells hang at arm’s length from your shoulders [A]. Without moving your torso, row the dumbbells upward by raising your upper arms, bending your elbows and squeezing your shoulder blades together [B]. Pause, then lower the dumbbells back to start.</string>
+    <string name="dumbbell_side_lunge_and_touch">Dumbbell Side Lunge and Touch</string>
+    <string name="dumbbell_side_lunge_and_touch_instructions">Grab a pair of dumbbells and hold them at arm’s length next to your sides [A]. Lift your left foot and take a big step to your left as you push your hips backward and lower your body by dropping your hips and bending your knees. As you lower your body, bend forward at your hips and touch the dumbbells to the floor [B]. Do all your reps with your left leg, then repeat with your right. If that’s too hard, do the same move without the dumbbells; simply reach for the floor with your hands.</string>
+    <string name="pushup_position_row">Pushup Position Row</string>
+    <string name="pushup_position_row_instructions">Grasp a pair of hex dumbbell handles and set yourself in pushup position, your arms straight [A]. Keeping your core stiff, row the dumbbell in your right hand to the side of your chest, by pulling it upward and bending your arm [B]. Pause, then lower the dumbbell back down quickly, and repeat the same movement with your left arm.</string>
+    <string name="dumbbell_lunge_and_rotation">Dumbbel Lunge and Rotation</string>
+    <string name="dumbbell_lunge_and_rotation_instructions">Grab a dumbbell and hold it vertically in front of your chest, with your feet slightly wider than shoulder-width apart. Keeping your back naturally arched, push your hips back, bend your knees, and lower your body until the tops of your thighs are at least parallel to the floor. Pause, then push yourself back up to the start. If that’s too hard, do a bodyweight squat instead.</string>
+    <string name="dumbbell_push_press">Dumbbell Push Press</string>
+    <string name="dumbbell_push_press_instructions">Stand holding a pair of dumbbells just outside of your shoulders, with your arms bent and palms facing each other. Set your feet should be shoulder-width apart, your knees slightly bent. Dip you knees [A], then explosively push up with your legs as you press the weights straight over your shoulders [B]. Lower the dumbbells back to the starting position and repeat.</string>
+    <string name="instructions">Instructions</string>
+    <string name="step_a">Position A</string>
+    <string name="step_b">Position B</string>
+    <string name="step_c">Position C</string>
+    <string name="speak_instructions">or speak &quot;Ready&quot; to begin</string>
+    <string name="completed">Workout Completed!</string>
+    <string name="rest_title">Rest</string>
+</resources>
