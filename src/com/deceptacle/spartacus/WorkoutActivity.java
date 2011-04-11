@@ -5,6 +5,7 @@ import java.util.Locale;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.speech.tts.TextToSpeech;
@@ -27,6 +28,7 @@ public class WorkoutActivity extends Activity implements OnClickListener, OnInit
 	private SpartacusApplication app;
 	private boolean running = false;
 	private ExerciseTimer timer;
+	private String exercise;
 	
 	private class ExerciseTimer extends CountDownTimer {
 		private boolean thirtySecondMarker = false;
@@ -46,7 +48,7 @@ public class WorkoutActivity extends Activity implements OnClickListener, OnInit
 		
 		@Override
 		public void onTick(long millisUntilFinished) {
-			double left = Math.round(millisUntilFinished / 1000.0);
+			int left = (int) Math.round(millisUntilFinished / 1000.0);
 			if (left <= 31 && thirtySecondMarker == false) {
 				speaker.speak("Thirty seconds remaining", TextToSpeech.QUEUE_FLUSH, null);
 				thirtySecondMarker = true;
@@ -64,39 +66,52 @@ public class WorkoutActivity extends Activity implements OnClickListener, OnInit
 		switch (app.getCurrentExercise()) {
 			case GobletSquat:
 				setContentView(R.layout.station_1);
+				exercise = "Goblet Squat";
 				break;
 			case MountainClimber:
 				setContentView(R.layout.station_2);
+				exercise = "Mountain Climbers";
 				break;
 			case SingleArmDumbbellSwing:
 				setContentView(R.layout.station_3);
+				exercise = "Single Arm Dumbbell Swing";
 				break;
 			case TPushup:
 				setContentView(R.layout.station_4);
+				exercise = "T Pushup";
 				break;
 			case SplitJump:
 				setContentView(R.layout.station_5);
+				exercise = "Split Jump";
 				break;
 			case DumbbellRow:
 				setContentView(R.layout.station_6);
+				exercise = "Dumbbell Row";
 				break;
 			case DumbbellSideLungeAndTouch:
 				setContentView(R.layout.station_7);
+				exercise = "Dumbbell Side Lunge And Touch";
 				break;
 			case PushupPositionRow:
 				setContentView(R.layout.station_8);
+				exercise = "Pushup Position Row";
 				break;
 			case DumbbellLungeAndRotation:
 				setContentView(R.layout.station_9);
+				exercise = "Dumbbell Lunge And Rotation";
 				break;
 			case DumbbellPushPress:
 				setContentView(R.layout.station_10);
+				exercise = "Dumbbell Push Press";
 				break;
 		}
+		
+		setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 		
 		speaker = new TextToSpeech(this, this);
 		
 		secondsRemaining = (TextView) findViewById(R.id.seconds_remaining);
+		secondsRemaining.setKeepScreenOn(true);
 		begin = (Button) findViewById(R.id.begin);
 		startPanel = (LinearLayout) findViewById(R.id.start_panel);
 		begin.setOnClickListener(this);
@@ -130,6 +145,8 @@ public class WorkoutActivity extends Activity implements OnClickListener, OnInit
 	public void onInit(int arg) {
 		speaker.setLanguage(Locale.getDefault());
 		speaker.setOnUtteranceCompletedListener(this);
+		
+		speaker.speak(exercise, TextToSpeech.QUEUE_ADD, null);
 	}
 
 	@Override

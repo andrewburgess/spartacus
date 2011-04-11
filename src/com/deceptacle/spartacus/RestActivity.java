@@ -5,6 +5,7 @@ import java.util.Locale;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.speech.tts.TextToSpeech;
@@ -39,7 +40,7 @@ public class RestActivity extends Activity implements OnInitListener, OnUtteranc
 		
 		@Override
 		public void onTick(long millisUntilFinished) {
-			double left = Math.round(millisUntilFinished / 1000.0);
+			int left = (int) Math.round(millisUntilFinished / 1000.0);
 			secondsRemaining.setText(left + " seconds left");
 		}
 	}
@@ -49,9 +50,12 @@ public class RestActivity extends Activity implements OnInitListener, OnUtteranc
 		super.onCreate(savedInstance);
 		setContentView(R.layout.rest);
 		
+		setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+		
 		app = (SpartacusApplication) getApplication();
 		
 		secondsRemaining = (TextView) findViewById(R.id.seconds_remaining);
+		secondsRemaining.setKeepScreenOn(true);
 		
 		if (app.getCurrentExercise() == Exercises.DumbbellPushPress)
 			timer = new RestTimer(120000, 500);
