@@ -31,4 +31,5 @@
     <string name="speak_instructions">or speak &quot;Ready&quot; to begin</string>
     <string name="completed">Workout Completed!</string>
     <string name="rest_title">Rest</string>
+    <string name="welcome_message">This application is currently in the BETA stages. I\'m aware of a few issues and there are a number of features I would like to add in the future. Feel free to leave comments or contact me about features and issues</string>
 </resources>

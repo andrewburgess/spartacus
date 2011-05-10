@@ -45,7 +45,7 @@
 				<LinearLayout
 					android:id="@+id/start_panel"
 					android:orientation="horizontal"
-					android:layout_width="match_parent" 
+					android:layout_width="fill_parent" 
 					android:layout_height="wrap_content"
 					android:layout_marginTop="5dp"
 					android:layout_marginBottom="10dp"
@@ -58,9 +58,9 @@
 						android:layout_width="wrap_content" 
 						android:layout_height="wrap_content" />
 						
-					<TextView 
-						android:text="@string/speak_instructions" 
-						android:id="@+id/speak_text" 
+					<Button 
+						android:text="Skip Exercise" 
+						android:id="@+id/skip" 
 						android:layout_width="wrap_content" 
 						android:layout_height="wrap_content" 
 						android:layout_gravity="right|center_vertical" 

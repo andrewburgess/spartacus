@@ -5,5 +5,6 @@
     android:layout_height="fill_parent"
     >
     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/title" android:text="@string/main_title" android:textSize="30dp" android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:layout_marginTop="20dp" android:layout_marginBottom="80dp"></TextView>
-    <Button android:layout_height="wrap_content" android:id="@+id/begin" android:text="@string/begin_workout" android:layout_width="fill_parent" android:layout_marginTop="80dp" android:layout_marginLeft="15dp" android:layout_marginRight="15dp" android:layout_gravity="bottom|center_horizontal"></Button>
+    <TextView android:id="@+id/textView1" android:layout_height="wrap_content" android:layout_width="fill_parent" android:text="@string/welcome_message" android:layout_margin="10dp"></TextView>
+    <Button android:id="@+id/begin" android:text="@string/begin_workout" android:layout_width="fill_parent" android:layout_marginTop="80dp" android:layout_marginLeft="15dp" android:layout_marginRight="15dp" android:layout_gravity="bottom|center_horizontal" android:layout_height="fill_parent" android:layout_marginBottom="20dp"></Button>
 </LinearLayout>

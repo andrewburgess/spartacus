@@ -23,6 +23,7 @@ public class WorkoutActivity extends Activity implements OnClickListener, OnInit
 	protected LinearLayout startPanel;
 	protected TextView secondsRemaining;
 	protected Button begin;
+	protected Button skip;
 	protected TextToSpeech speaker;
 	
 	private SpartacusApplication app;
@@ -113,8 +114,10 @@ public class WorkoutActivity extends Activity implements OnClickListener, OnInit
 		secondsRemaining = (TextView) findViewById(R.id.seconds_remaining);
 		secondsRemaining.setKeepScreenOn(true);
 		begin = (Button) findViewById(R.id.begin);
+		skip = (Button) findViewById(R.id.skip);
 		startPanel = (LinearLayout) findViewById(R.id.start_panel);
 		begin.setOnClickListener(this);
+		skip.setOnClickListener(this);
 	}
 	
 	@Override
@@ -128,6 +131,44 @@ public class WorkoutActivity extends Activity implements OnClickListener, OnInit
 		if (view.getId() == R.id.begin) {
 			if (!running)
 				startExercise();
+		} else if (view.getId() == R.id.skip) {
+					
+			switch (app.getCurrentExercise()) {
+				case GobletSquat:
+					app.setCurrentExercise(Exercises.MountainClimber);
+					break;
+				case MountainClimber:
+					app.setCurrentExercise(Exercises.SingleArmDumbbellSwing);
+					break;
+				case SingleArmDumbbellSwing:
+					app.setCurrentExercise(Exercises.TPushup);
+					break;
+				case TPushup:
+					app.setCurrentExercise(Exercises.SplitJump);
+					break;
+				case SplitJump:
+					app.setCurrentExercise(Exercises.DumbbellRow);
+					break;
+				case DumbbellRow:
+					app.setCurrentExercise(Exercises.DumbbellSideLungeAndTouch);
+					break;
+				case DumbbellSideLungeAndTouch:
+					app.setCurrentExercise(Exercises.PushupPositionRow);
+					break;
+				case PushupPositionRow:
+					app.setCurrentExercise(Exercises.DumbbellLungeAndRotation);
+					break;
+				case DumbbellLungeAndRotation:
+					app.setCurrentExercise(Exercises.DumbbellPushPress);
+					break;
+				case DumbbellPushPress:
+					startActivity(new Intent(this, RestActivity.class));
+					finish();
+					return;
+			}
+			
+			startActivity(new Intent(this, WorkoutActivity.class));
+			finish();
 		}
 	}
 	
